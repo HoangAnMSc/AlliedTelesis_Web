@@ -1,0 +1,113 @@
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+}
+
+/* inner container */
+.header_inner {
+    width: 100%;
+    max-width: 1600px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo */
+.header_alide {
+    margin: 0;
+    width: 296px;
+    flex: 0 0 auto;
+}
+
+.header_alide a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header_alide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* contact buttons */
+.header_contact {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    flex: 0 0 auto;
+}
+
+.header_contact a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header_contact picture,
+.header_contact img {
+    display: block;
+}
+
+.header_contact picture {
+    /* width: 145px;
+    max-width: 145px; */
+    background: transparent;
+}
+
+/* hamburger button default hidden on PC */
+.header_menu {
+    display: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.header_menu:focus {
+    outline: 2px solid rgba(1, 107, 42, .35);
+    outline-offset: 3px;
+}
+
+/* ------- small phone fine tune ------- */
+@media (max-width: 375px) {
+    .header_inner {
+        height: 60px;
+        padding: 0 3.2vw;
+        box-sizing: border-box;
+    }
+
+    .header_alide {
+        width: 20.8vw;
+    }
+
+    .header_contact {
+        gap: 6px;
+    }
+
+    .header_contact picture {
+        width: 18vw;
+        max-width: none;
+    }
+
+    .header_menu {
+        margin-left: 3.2vw;
+        width: 5.3333333333vw;
+        height: 4.8vw;
+    }
+
+    .header_menu span,
+    .header_menu::before,
+    .header_menu::after {
+        height: 0.5333333333vw;
+    }
+}

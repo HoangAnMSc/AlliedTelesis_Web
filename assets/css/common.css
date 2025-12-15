@@ -1,0 +1,240 @@
+
+/*-----------------------------------------------*/
+/*-------------------- font ---------------------*/
+/*-----------------------------------------------*/
+@font-face {
+    font-family: 'oswald_medium';
+    src: url('/fonts/Oswald-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'oswald_bold';
+    src: url('/fonts/Oswald-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/fonts/Recoleta-Regular.otf');
+}
+
+/*-----------------------------------------------*/
+/*-------------------- common -------------------*/
+/*-----------------------------------------------*/
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Noto Sans JP';
+    font-size: 14px;
+    color: #191919;
+    background-color: #fff;
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    font-size: 14px;
+    color: #191919;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+/*---------- input reset ----------*/
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+    border-radius: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select {
+    background-image: url('../image/select_cursor.png');
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    border-radius: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #191919;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+button:hover:before {
+    opacity: 0.3;
+}
+
+/*---------- disabled ----------*/
+input:disabled,
+textarea:disabled,
+select:disabled {
+    background-color: #d9d9d9;
+}
+
+/*---------- error ----------*/
+.error {
+    background-color: #fdc0c0 !important;
+}
+
+/*---------- placeholder ----------*/
+::placeholder {
+    color: #aaaaaa;
+}
+
+/*---------- scrollbar ----------*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #191919;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    border: 1px solid #191919;
+}
+
+/*---------- loading ----------*/
+.loading {
+    display: none;
+}
+
+.loading.active {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.loading.active span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.loading.active span i {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+/*---------- button options ----------*/
+button.red {
+    color: #ffffff;
+    background-color: #d85656;
+}
+
+button.yellow {
+    color: #ffffff;
+    background-color: #e5a82e;
+}
+
+button.green {
+    color: #ffffff;
+    background-color: #59b559;
+}
+
+button.blue {
+    color: #ffffff;
+    background-color: #00539b;
+}
+
+button.sky {
+    color: #ffffff;
+    background-color: #2fb5be;
+}
+
+button.violet {
+    color: #ffffff;
+    background-color: #8243c4;
+}
+
+button.gray {
+    color: #ffffff;
+    background-color: #aaaaaa;
+}
+
+button.max {
+    width: 100%;
+}
+
+/*---------- responsive ----------*/
+@media (max-width: 768px) {
+    .pc {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .sp {
+        display: none !important;
+    }
+}

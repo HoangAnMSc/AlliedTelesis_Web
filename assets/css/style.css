@@ -1,0 +1,249 @@
+.main_container {
+    margin: 0 auto;
+}
+
+.recruit_container {
+    background-image:
+        linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) calc(100% - 80px),
+            rgba(255, 255, 255, 1) 100%),
+        url("../images/mask_X.png");
+
+    background-repeat: no-repeat, repeat;
+    background-position: center bottom, center top;
+    background-size: 100% 100%, 1600px auto;
+}
+
+.recruitment_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 151px 0 68.2px 0;
+}
+
+.recruitment_content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 96px;
+}
+
+.viewmore_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding-bottom: 81px;
+}
+
+.recruitment_city_top {
+    position: absolute;
+    width: 341px;
+    right: 62.3px;
+    top: -68.2px;
+}
+
+.recruitment_city_bottom {
+    position: absolute;
+    width: 341px;
+    left: 62.3px;
+    bottom: 0;
+}
+
+
+/* viewMore ============================*/
+.recruit_btn {
+    width: 580px;
+    height: 140px;
+    border-radius: 10px;
+    padding-right: 25px;
+    background: #a21c00;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 44px;
+    text-decoration: none;
+    transition: background .25s ease;
+}
+
+.recruit_btn:hover {
+    background: #000;
+}
+
+.recruit_btn_text {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 3.36px;
+}
+
+.btn_text_small {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+}
+
+.arrow_wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow_circle {
+    width: 51px;
+    height: 51px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    flex: 0 0 auto;
+}
+
+.arrow_label {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.72px;
+    white-space: nowrap;
+}
+
+.arrow_motion {
+    position: absolute;
+    left: 40px;
+    top: 35%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 44px;
+    background: #fff;
+    transform-origin: left center;
+    transition: width .35s ease;
+}
+
+.arrow_motion::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 14px;
+    height: 10px;
+    border-top: 1px solid #fff;
+    transform: translateY(-45%) rotate(40deg);
+}
+
+.recruit_btn:hover .arrow_motion {
+    width: 49px;
+}
+
+/* ------------ responsive (SP) -------------- */
+@media (max-width: 375px) {
+    .viewmore_content {
+        flex-direction: column;
+    }
+
+    .recruitment_title {
+        padding: 99px 0 28.3px 0;
+    }
+
+    .recruitment_content {
+        margin: 40px 0;
+    }
+
+    .recruitment_city_top {
+        position: absolute;
+        width: 114px;
+        right: 4px;
+        top: -68.2px;
+    }
+
+    .recruitment_city_bottom {
+        position: absolute;
+        width: 78px;
+        left: 4px;
+        bottom: 100px;
+    }
+
+    .viewmore_content {
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+        /* viewMore ============================*/
+    .recruit_btn {
+        width: 305px;
+        height: 62px;
+        border-radius: 10px;
+        padding-right: 20px;
+        background: #a21c00;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 36px;
+        text-decoration: none;
+        transition: background .25s ease;
+    }
+
+    .recruit_btn:hover {
+        background: #000;
+    }
+
+    .recruit_btn_text {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 2.64px;s
+    }
+
+    .btn_text_small {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0px;
+    }
+
+    .arrow_wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .arrow_circle {
+        width: 26px;
+        height: 26px;
+        border: 1px solid #fff;
+        border-radius: 999px;
+        flex: 0 0 auto;
+    }
+
+    .arrow_label {
+        display: none;
+    }
+
+    .arrow_motion {
+        position: absolute;
+        left: 14px;
+        top: 45%;
+        transform: translateY(-50%);
+        height: 1px;
+        width: 22px;
+        background: #fff;
+        transform-origin: left center;
+        transition: width .35s ease;
+    }
+
+    .arrow_motion::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 8px;
+        height: 6px;
+        border-top: 1px solid #fff;
+        transform: translateY(-45%) rotate(40deg);
+    }
+
+    .recruit_btn:hover .arrow_motion {
+        width: 22px;
+    }
+}
